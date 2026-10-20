@@ -16,7 +16,8 @@
 <div class="field"><label for="landFilter">Тип земли</label><select id="landFilter"><option value="">Все земли</option><option>Доброземельная</option><option>Болотная</option><option>Лавовая</option><option>Ледяная</option><option>Равнинная</option><option>Кукурузная</option><option>Песчаная</option><option>Радужная</option></select></div>
 <div class="field wide"><label for="setFilter">Набор</label><select id="setFilter"><option value="">Все наборы</option></select></div>
 </section>
-<div class="toolbar"><div id="count" aria-live="polite">Загрузка каталога…</div><div class="actions"><label for="sort" style="font-size:13px;color:var(--muted)">Сортировка</label><select id="sort"><option value="name">По названию</option><option value="cost">По стоимости</option><option value="attack">По атаке</option><option value="defense">По защите</option></select><button id="reset">Сбросить</button></div></div>
+<div class="toolbar"><div id="count" aria-live="polite">Загрузка каталога…</div><div class="actions"><label for="sort" style="font-size:13px;color:var(--muted)">Сортировка</label><div class="stat-filters"><label>Стоимость<input id="filterCost" type="number" step="1" placeholder="Любая"></label><label>Атака<input id="filterAttack" type="number" step="1" placeholder="Любая"></label><label>Защита<input id="filterDefense" type="number" step="1" placeholder="Любая">
+</label></div><button id="reset">Сбросить</button></div></div>
 <section id="results" class="grid" aria-live="polite"></section>
 <p class="note">Демонстрационные записи — не настоящие карты. Замените их своими данными в массиве cards внутри файла index.html.</p>
 </main>
