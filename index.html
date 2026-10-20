@@ -18,7 +18,9 @@
 <div class="field"><label for="filterCost">Стоимость</label><input id="filterCost" type="number" step="1" placeholder="Любая"></div>
 <div class="field"><label for="filterAttack">Атака</label><input id="filterAttack" type="number" step="1" placeholder="Любая"></div>
 <div class="field"><label for="filterDefense">Защита</label><input id="filterDefense" type="number" step="1" placeholder="Любая"></div>
-<div class="field"><button id="reset" type="button">Сбросить</button></div></section><section id="results" class="grid" aria-live="polite"></section><p class="note">Демонстрационные записи — не настоящие карты. Замените их своими данными в массиве cards внутри файла index.html.</p></main><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="field"><button id="reset" type="button">Сбросить</button></div></section>
+<div id="count" aria-live="polite">Найдено карт: 0</div>
+<section id="results" class="grid" aria-live="polite"></section><p class="note">Демонстрационные записи — не настоящие карты. Замените их своими данными в массиве cards внутри файла index.html.</p></main><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
 <div class="modal-inner"><button class="close" id="closeModal">Закрыть ✕</button><h2 id="modalTitle"></h2><div class="modal-art" id="modalArt"></div>
 <div id="modalMeta" class="chips" style="margin-top:12px"></div><div id="modalStats" class="stats"></div><h3>Эффект</h3><p id="modalEffect" class="modal-effect"></p><p id="modalNote" style="font-size:13px;color:var(--muted)"></p></div></div><script>
 // Демонстрационные данные. Добавляйте настоящие карты, копируя один объект.
