@@ -10,14 +10,67 @@
 <header><h1>Карточные войны</h1><p>Русская база карт · стартовая версия</p></header>
 <main>
 <section class="filters" aria-label="Поиск и фильтры">
-<div class="field wide"><label for="nameSearch">Поиск по названию карты</label><input id="nameSearch" placeholder="Введите название карты…" autocomplete="off"></div>
-<div class="field wide"><label for="effectSearch">Поиск по эффекту</label><input id="effectSearch" placeholder="Введите слово или фразу из эффекта…" autocomplete="off"></div>
-<div class="field"><label for="typeFilter">Тип карты</label><select id="typeFilter"><option value="">Все типы</option><option>Существо</option><option>Заклинание</option><option>Строение</option></select></div>
-<div class="field"><label for="landFilter">Тип земли</label><select id="landFilter"><option value="">Все земли</option><option>Доброземельная</option><option>Болотная</option><option>Лавовая</option><option>Ледяная</option><option>Равнинная</option><option>Кукурузная</option><option>Песчаная</option><option>Радужная</option></select></div>
-<div class="field wide"><label for="setFilter">Набор</label><select id="setFilter"><option value="">Все наборы</option></select></div>
+  <div class="field wide">
+    <label for="nameSearch">Поиск по названию карты</label>
+    <input id="nameSearch" placeholder="Введите название карты…" autocomplete="off">
+  </div>
+
+  <div class="field wide">
+    <label for="effectSearch">Поиск по эффекту</label>
+    <input id="effectSearch" placeholder="Введите слово или фразу из эффекта…" autocomplete="off">
+  </div>
+
+  <div class="field">
+    <label for="typeFilter">Тип карты</label>
+    <select id="typeFilter">
+      <option value="">Все типы</option>
+      <option>Существо</option>
+      <option>Заклинание</option>
+      <option>Строение</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="landFilter">Тип земли</label>
+    <select id="landFilter">
+      <option value="">Все земли</option>
+      <option>Доброземельная</option>
+      <option>Болотная</option>
+      <option>Лавовая</option>
+      <option>Ледяная</option>
+      <option>Равнинная</option>
+      <option>Кукурузная</option>
+      <option>Песчаная</option>
+      <option>Радужная</option>
+    </select>
+  </div>
+
+  <div class="field wide">
+    <label for="setFilter">Набор</label>
+    <select id="setFilter">
+      <option value="">Все наборы</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="filterCost">Стоимость</label>
+    <input id="filterCost" type="number" step="1" placeholder="Любая">
+  </div>
+
+  <div class="field">
+    <label for="filterAttack">Атака</label>
+    <input id="filterAttack" type="number" step="1" placeholder="Любая">
+  </div>
+
+  <div class="field">
+    <label for="filterDefense">Защита</label>
+    <input id="filterDefense" type="number" step="1" placeholder="Любая">
+  </div>
+
+  <div class="field">
+    <button id="reset" type="button">Сбросить фильтры</button>
+  </div>
 </section>
-<div class="toolbar"><div id="count" aria-live="polite">Загрузка каталога…</div><div class="actions"><label for="sort" style="font-size:13px;color:var(--muted)">Сортировка</label><div class="stat-filters"><label>Стоимость<input id="filterCost" type="number" step="1" placeholder="Любая"></label><label>Атака<input id="filterAttack" type="number" step="1" placeholder="Любая"></label><label>Защита<input id="filterDefense" type="number" step="1" placeholder="Любая">
-</label></div><button id="reset">Сбросить</button></div></div>
 <section id="results" class="grid" aria-live="polite"></section>
 <p class="note">Демонстрационные записи — не настоящие карты. Замените их своими данными в массиве cards внутри файла index.html.</p>
 </main>
