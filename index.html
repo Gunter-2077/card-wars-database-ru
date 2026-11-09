@@ -314,6 +314,36 @@ button:hover {
     line-height: 1.5;
   }
 }
+  /* Принудительное исправление сетки карточек */
+#results {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  grid-template-rows: none !important;
+  grid-auto-flow: row !important;
+  grid-auto-rows: auto !important;
+  justify-content: stretch !important;
+  justify-items: stretch !important;
+  align-items: start !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+#results .card {
+  width: 100% !important;
+  max-width: none !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  position: relative !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+@media (max-width: 600px) {
+  #results {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+}
 </style></head><body>
 <header><h1>Карточные войны</h1><p>База данных карт · Банда Шкетов</p></header>
 <main>
