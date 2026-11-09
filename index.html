@@ -128,6 +128,48 @@
 .modal-effect {
   white-space: pre-wrap;
 }
+  /* Отображение окна карты на телефонах */
+@media (max-width: 600px) {
+  .modal {
+    padding: 8px;
+    align-items: center;
+  }
+
+  .modal-inner {
+    width: 100%;
+    max-height: 95vh;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .modal-inner h2 {
+    font-size: 21px;
+    padding-right: 75px;
+  }
+
+  .modal-art {
+    min-height: 120px;
+    padding: 8px;
+  }
+
+  .modal-art img {
+    max-width: 100%;
+    max-height: 45vh;
+    object-fit: contain;
+  }
+
+  .close {
+    right: 10px;
+    top: 10px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .modal-effect {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
 </style></head><body>
 <header><h1>Карточные войны</h1><p>База данных карт · Банда Шкетов</p></header>
 <main>
