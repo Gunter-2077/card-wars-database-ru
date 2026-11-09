@@ -190,6 +190,18 @@
   height: 100%;
   object-fit: contain;
 }
+  @media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: stretch;
+    gap: 6px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 </style></head><body>
 <header><h1>Карточные войны</h1><p>База данных карт · Банда Шкетов</p></header>
 <main>
