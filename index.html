@@ -135,11 +135,11 @@
   height: 42px;
   margin: 0;
 }
-  /* Галерея карточек */
+/* Сетка карточек */
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 8px;
+  gap: 12px;
   align-items: start;
   justify-items: center;
   width: 100%;
@@ -156,6 +156,7 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
   }
 }
 
@@ -188,14 +189,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-/* Телефоны */
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-  }
 }
 </style></head><body>
 <header><h1>Карточные войны</h1><p>База данных карт · Банда Шкетов</p></header>
