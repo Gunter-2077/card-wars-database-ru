@@ -139,9 +139,9 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 12px;
+  gap: 8px;
   align-items: start;
-  justify-items: center;
+  justify-items: stretch;
   width: 100%;
 }
 
@@ -156,7 +156,7 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: 6px;
   }
 }
 
