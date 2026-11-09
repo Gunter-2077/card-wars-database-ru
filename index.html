@@ -226,6 +226,16 @@
   line-height: 1.4;
 }
   }
+  .filters .field:has(#reset) {
+  align-self: start;
+}
+
+#reset {
+  width: 100%;
+  min-height: 42px;
+  height: 42px;
+  margin: 0;
+}
 </style></head><body>
 <header><h1>Карточные войны</h1><p>База данных карт · Банда Шкетов</p></header>
 <main>
@@ -238,7 +248,10 @@
 <div class="field"><label for="filterCost">Стоимость</label><input id="filterCost" type="number" step="1" placeholder="Любая"></div>
 <div class="field"><label for="filterAttack">Атака</label><input id="filterAttack" type="number" step="1" placeholder="Любая"></div>
 <div class="field"><label for="filterDefense">Защита</label><input id="filterDefense" type="number" step="1" placeholder="Любая"></div>
-<div class="field"><button id="reset" type="button">Сбросить</button></div></section>
+<div class="field">
+  <label aria-hidden="true">&nbsp;</label>
+  <button id="reset" type="button">Сбросить</button>
+</div>
 <div id="count" aria-live="polite">Найдено карт: 0</div>
 <section id="results" class="grid" aria-live="polite"></section><p class="note">Демонстрационные записи — не настоящие карты. Замените их своими данными в массиве cards внутри файла index.html.</p></main><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
 <div class="modal-inner"><button class="close" id="closeModal">Закрыть ✕</button><h2 id="modalTitle"></h2><div class="modal-art" id="modalArt"></div>
