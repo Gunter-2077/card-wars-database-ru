@@ -170,6 +170,40 @@
     line-height: 1.5;
   }
 }
+  @media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+  }
+
+  .art img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 7px 10px;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+  }
 </style></head><body>
 <header><h1>Карточные войны</h1><p>База данных карт · Банда Шкетов</p></header>
 <main>
@@ -468,10 +502,11 @@ function showCard(id) {
     ? `<img src="${esc(c.image)}" alt="${esc(c.name)}">`
     : `<div>${esc(c.name)}<br><small>Добавьте изображение и укажите путь в данных карты.</small></div>`;
 
-  $('modalMeta').innerHTML = [c.type, c.land, c.set]
-    .filter(Boolean)
-    .map(x => `<span class="chip">${esc(x)}</span>`)
-    .join('');
+  $('modalMeta').innerHTML = `
+  ${c.type ? `<span class="chip"><strong>Тип карты:</strong> ${esc(c.type)}</span>` : ''}
+  ${c.land ? `<span class="chip"><strong>Тип земли:</strong> ${esc(c.land)}</span>` : ''}
+  ${c.set ? `<span class="chip"><strong>Набор:</strong> ${esc(c.set)}</span>` : ''}
+`;
 
   $('modalStats').textContent = [
     c.cost != null ? `Стоимость: ${c.cost}` : '',
