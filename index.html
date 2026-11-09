@@ -56,15 +56,20 @@
 
 /* Телефоны */
 @media (max-width: 600px) {
- .grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
-  justify-items: center;
-}
-}
-.card {
-  width: 115px;
-  max-width: 100%;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 105px));
+    justify-content: start;
+    justify-items: stretch;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .grid .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
 
 }
   
